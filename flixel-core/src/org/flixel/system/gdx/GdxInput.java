@@ -148,6 +148,10 @@ public class GdxInput extends InputMultiplexer implements InputProcessor
 		_map.put(Keys.Z, Keyboard.Z);
 	}
 
+	public int convertKeycode(int keycode) {
+		return _map.get(keycode, -1);
+	}
+
 	@Override
 	public boolean keyDown(int keycode)
 	{
